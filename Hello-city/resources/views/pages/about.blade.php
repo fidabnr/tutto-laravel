@@ -1,6 +1,6 @@
 @extends('base')
 
- @section('title' , 'About us | Hello City')
+ @section('title' , 'About us | '.env('APP_NAME'))
 
     @section('content')
         <p>Built by &hearts; Fida Bannour</p>
