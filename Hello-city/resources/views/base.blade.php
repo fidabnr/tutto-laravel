@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name ="viewport" content="width=device-width, initial-scale=1">
 
         <title>@yield('title' ,config('app.name'))</title>
     </head>
@@ -12,7 +12,9 @@
 
         <footer>
             <p>&copy; copyright {{date ('Y')}} 
-                &middot; <a href="/about-us">About us</a>
+                @if(Route :: is('home'))
+                &middot; <a href="{{route ('about')}}">About us</a>
+                @endif
             </p>
         </footer>      
          
